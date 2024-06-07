@@ -12,6 +12,7 @@ configure_logging()
 @app.route('/', methods=['GET'])
 def home():
     # Test: Logging environment variables
+    loggin.info("Here is my credentials:")
     logging.info(app.config['ACCESS_TOKEN'])
     logging.info(app.config["APP_ID"])
     logging.info(app.config["APP_SECRET"])
