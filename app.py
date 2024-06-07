@@ -1,6 +1,6 @@
 from flask import Flask
 import os
-from .config import load_configurations, configure_logging
+from config import load_configurations, configure_logging
 
 app = Flask(__name__)
 
