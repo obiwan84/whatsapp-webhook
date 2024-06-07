@@ -10,6 +10,14 @@ configure_logging()
 
 @app.route('/', methods=['GET'])
 def home():
+    # Test: Logging environment variables
+    logging.info(app.config['ACESS_TOKEN'])
+    logging.info(app.config["APP_ID"])
+    logging.info(app.config["APP_SECRET"])
+    logging.info(app.config["RECIPIENT_WAID"])
+    logging.info(app.config["VERSION"])
+    logging.info(app.config["PHONE_NUMBER_ID"])
+    logging.info(app.config["VERIFY_TOKEN"])
     return "Hello world, welcome to my MVP"
 
 @app.route('/webhook', methods=['GET', 'POST'])
