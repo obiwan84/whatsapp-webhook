@@ -1,7 +1,12 @@
 from flask import Flask
 import os
+from .config import load_configurations, configure_logging
 
 app = Flask(__name__)
+
+# Load configurations and logging settings
+load_configurations(app)
+configure_logging()
 
 @app.route('/', methods=['GET'])
 def home():
