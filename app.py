@@ -1,5 +1,6 @@
 from flask import Flask
 import os
+import logging
 from config import load_configurations, configure_logging
 
 app = Flask(__name__)
