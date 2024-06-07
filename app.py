@@ -12,7 +12,7 @@ configure_logging()
 @app.route('/', methods=['GET'])
 def home():
     # Test: Logging environment variables
-    logging.info(app.config['ACESS_TOKEN'])
+    logging.info(app.config['ACCESS_TOKEN'])
     logging.info(app.config["APP_ID"])
     logging.info(app.config["APP_SECRET"])
     logging.info(app.config["RECIPIENT_WAID"])
